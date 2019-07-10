@@ -19,7 +19,7 @@ Route::group(['namespace' => 'frontend'], function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/logout',function(){
     Auth::logout();
     return redirect('/');
@@ -34,7 +34,8 @@ Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
 
     Route::get('home-slider','HomePageController@slider')->name('homeSlider');
 
-    Route::get('home-clients','HomePageController@clients')->name('homeOurClients');
+    Route::get('home-clients-list','HomePageController@clients')->name('homeOurClients');
+    Route::get('home-clients-add','HomePageController@clientsAdd')->name('clientsAdd');
 
     Route::get('home-services','HomePageController@services')->name('homeServices');
 

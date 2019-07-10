@@ -29,8 +29,13 @@ class HomePageController extends Controller
 
     public function clients()
     {
-        return view('backend.home-our-clients');
+        return view('backend.home-show-clients');
     }
+    public function clientsAdd()
+    {
+        return view('backend.home-add-clients');
+    }
+
     public function aboutUs()
     {
         return view('backend.about-us');
