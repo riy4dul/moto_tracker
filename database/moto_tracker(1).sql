@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2019 at 01:25 PM
+-- Generation Time: Jul 11, 2019 at 02:32 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -43,11 +43,11 @@ CREATE TABLE `home_page_clients` (
 --
 
 INSERT INTO `home_page_clients` (`id`, `name`, `phone`, `address`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'ADF', '1231', 'ADAS', 'D:\\xampp\\tmp\\phpA42A.tmp', '2019-07-10 03:47:47', '2019-07-10 03:47:47'),
-(2, 'Admin', '12313', 'adfafd', 'D:\\xampp\\tmp\\phpA229.tmp', '2019-07-10 04:12:53', '2019-07-10 04:12:53'),
-(3, 'sa', '123', 'adfsfa', 'D:\\xampp\\tmp\\phpB7C6.tmp', '2019-07-10 04:16:16', '2019-07-10 04:16:16'),
-(4, 'a', '1212313213', 'afdasfa', 'a-2019-07-10.png', '2019-07-10 04:26:14', '2019-07-10 04:26:14'),
-(5, 'riyadul', '123423421', 'DHAKA', 'riyadul-2019-07-10.png', '2019-07-10 04:27:01', '2019-07-10 04:27:01');
+(7, 'Babu', '235487985544', 'Dhaka', 'babu-2019-07-11.png', '2019-07-11 01:20:56', '2019-07-11 01:20:56'),
+(8, 'shawon', '01675268806', '123456789', 'shawon-2019-07-11.png', '2019-07-11 02:05:41', '2019-07-11 02:05:41'),
+(9, 'riyadul', '1232456789', 'dhaka', 'riyadul-2019-07-11.png', '2019-07-11 02:06:00', '2019-07-11 02:06:00'),
+(10, 'Rabbi', '0165755424', 'asdjlakl', 'rabbi-2019-07-11.png', '2019-07-11 02:06:58', '2019-07-11 02:06:58'),
+(11, 'nasrin', '015676556322', 'dhaka', 'nasrin-2019-07-11.png', '2019-07-11 02:08:03', '2019-07-11 02:08:03');
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `home_page_clients`
 --
 ALTER TABLE `home_page_clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `migrations`

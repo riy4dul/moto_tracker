@@ -45,4 +45,5 @@ Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
     //==============Client==============
 	// Route::get('client-list','CategoryController@index')->name('categoryList');
 	Route::post('client-add','HomePageController@store')->name('clientStore');
+    Route::post('client-delete/{id}','HomePageController@clientDestroy')->name('clientDelete');
 });

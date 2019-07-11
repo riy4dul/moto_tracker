@@ -5,6 +5,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\home_page_client;
+use Brian2694\Toastr\Facades\Toastr;
 class HomePageController extends Controller
 {
     /**
@@ -27,6 +28,7 @@ class HomePageController extends Controller
         return view('backend.home-services-and-features');
     }
 
+// ========================clients start======================================
     public function clients()
     {
         
@@ -40,28 +42,6 @@ class HomePageController extends Controller
         return view('backend.home-add-clients');
     }
 
-    public function aboutUs()
-    {
-        return view('backend.about-us');
-    }
-
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    // public function create()
-    // {
-    //     return ("create page");
-    // }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -93,10 +73,50 @@ class HomePageController extends Controller
         $client->photo=$photoname;
         $client->save();
 
-        // Toastr::success('Client Added Successfully','Success',["positionClass" => "toast-top-right"]);
+        Toastr::success('Client Added','',["positionClass" => "toast-top-right"]);
         
         return redirect()->route('homeOurClients');
     }
+
+    public function clientDestroy($id)
+    {
+        $client = home_page_client::find($id);
+        if (file_exists('frontend/assets/img/client/'.$client->photo))
+        {
+            unlink('frontend/assets/img/client/'.$client->photo);
+        }
+        $client->delete();
+
+        Toastr::error('Client Deleted','',["positionClass" => "toast-top-right"]);
+        return redirect()->route('homeOurClients');
+    }
+
+// ========================clients End======================================
+
+
+    public function aboutUs()
+    {
+        return view('backend.about-us');
+    }
+
+    
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    // public function create()
+    // {
+    //     return ("create page");
+    // }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    
 
     /**
      * Display the specified resource.

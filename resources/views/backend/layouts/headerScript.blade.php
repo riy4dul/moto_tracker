@@ -17,3 +17,5 @@
 <!-- BEGIN: Custom CSS-->
 <link rel="stylesheet" type="text/css" href="{{asset('')}}backend/app-assets/css/custom/custom.css">
 <!-- END: Custom CSS-->
+
+<link rel="stylesheet" href="{{asset('')}}backend/app-assets/css/toastr.min.css">
