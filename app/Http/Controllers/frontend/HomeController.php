@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers\frontend;
-
+use App\home_page_client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     public function index(){
-    	return view('frontend.home');
+    	 $clients = home_page_client::all();
+        
+    	return view('frontend.home',compact('clients'));
     }
     
     public function contacts(){

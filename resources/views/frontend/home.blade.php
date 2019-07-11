@@ -241,24 +241,11 @@
                 </div>
             </div>
             <div class="partner-slides">
+                @foreach($clients as $key=>$client)
                 <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-1.png" alt="Image Description"></a>
+                    <a class="partners-logo" href="#"><img src="{{asset('frontend/assets/img/client/'.$client->photo)}}" alt="Image Description"></a>
                 </div>
-                <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-2.png" alt="Image Description"></a>
-                </div>
-                <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-3.png" alt="Image Description"></a>
-                </div>
-                <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-4.png" alt="Image Description"></a>
-                </div>
-                <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-5.png" alt="Image Description"></a>
-                </div>
-                <div class="single-partner-slide">
-                    <a class="partners-logo" href="#"><img src="{{asset('')}}frontend/assets/img/partner-6.png" alt="Image Description"></a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

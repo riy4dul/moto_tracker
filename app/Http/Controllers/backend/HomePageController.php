@@ -29,7 +29,11 @@ class HomePageController extends Controller
 
     public function clients()
     {
-        return view('backend.home-show-clients');
+        
+        $clients=home_page_client::all();
+        // return view('backend.product.show-product', compact('products'));
+        // return $clients;
+        return view('backend.home-show-clients', compact('clients'));
     }
     public function clientsAdd()
     {
@@ -73,13 +77,13 @@ class HomePageController extends Controller
         {
             $currentDate = Carbon::now()->toDateString();
             $photoname = $slug.'-'.$currentDate.'.'. $photo->getClientOriginalExtension();
-            if (!file_exists('backend/images/client'))
+            if (!file_exists('frontend/assets/img/client'))
             {
-                mkdir('backend/images/client',0777,true);
+                mkdir('frontend/assets/img/client',0777,true);
             }
-            $photo->move('backend/images/client',$photoname);
+            $photo->move('frontend/assets/img/client',$photoname);
         }else{
-            $photoname = "backend/images/client/default.jpg";
+            $photoname = "frontend/assets/img/client/default.jpg";
         }
 
         $client = new home_page_client();
@@ -89,8 +93,9 @@ class HomePageController extends Controller
         $client->photo=$photoname;
         $client->save();
 
-        // Toastr::success('Product Added Successfully','Success',["positionClass" => "toast-top-right"]);
-        return redirect()->route('homePage');
+        // Toastr::success('Client Added Successfully','Success',["positionClass" => "toast-top-right"]);
+        
+        return redirect()->route('homeOurClients');
     }
 
     /**

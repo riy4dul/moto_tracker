@@ -9,3 +9,9 @@
 <!-- END THEME  JS-->
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="{{asset('')}}backend/app-assets/js/scripts/dashboard-ecommerce.js" type="text/javascript"></script>
+
+<!-- Data Table JS-->
+<script src="{{asset('')}}backend/app-assets/vendors/data-tables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="{{asset('')}}backend/app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
+<script src="{{asset('')}}backend/app-assets/vendors/data-tables/js/dataTables.select.min.js" type="text/javascript"></script>
+<script src="{{asset('')}}backend/app-assets/js/scripts/data-tables.js" type="text/javascript"></script>
