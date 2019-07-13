@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2019 at 02:32 PM
+-- Generation Time: Jul 13, 2019 at 02:20 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -44,10 +44,32 @@ CREATE TABLE `home_page_clients` (
 
 INSERT INTO `home_page_clients` (`id`, `name`, `phone`, `address`, `photo`, `created_at`, `updated_at`) VALUES
 (7, 'Babu', '235487985544', 'Dhaka', 'babu-2019-07-11.png', '2019-07-11 01:20:56', '2019-07-11 01:20:56'),
-(8, 'shawon', '01675268806', '123456789', 'shawon-2019-07-11.png', '2019-07-11 02:05:41', '2019-07-11 02:05:41'),
 (9, 'riyadul', '1232456789', 'dhaka', 'riyadul-2019-07-11.png', '2019-07-11 02:06:00', '2019-07-11 02:06:00'),
 (10, 'Rabbi', '0165755424', 'asdjlakl', 'rabbi-2019-07-11.png', '2019-07-11 02:06:58', '2019-07-11 02:06:58'),
 (11, 'nasrin', '015676556322', 'dhaka', 'nasrin-2019-07-11.png', '2019-07-11 02:08:03', '2019-07-11 02:08:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_page_services`
+--
+
+CREATE TABLE `home_page_services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `home_page_services`
+--
+
+INSERT INTO `home_page_services` (`id`, `title`, `sub_title`, `description`, `photo`, `created_at`, `updated_at`) VALUES
+(10, 'test', 'sss', '234324', 'test-2019-07-13-5d29919508dd3.png', '2019-07-13 02:08:53', '2019-07-13 02:08:53');
 
 -- --------------------------------------------------------
 
@@ -68,7 +90,8 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_07_10_091023_create_home_page_clients_table', 2);
+(3, '2019_07_10_091023_create_home_page_clients_table', 2),
+(4, '2019_07_13_052055_create_home_page_services_table', 3);
 
 -- --------------------------------------------------------
 
@@ -118,6 +141,12 @@ ALTER TABLE `home_page_clients`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `home_page_services`
+--
+ALTER TABLE `home_page_services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -144,13 +173,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `home_page_clients`
 --
 ALTER TABLE `home_page_clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `home_page_services`
+--
+ALTER TABLE `home_page_services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

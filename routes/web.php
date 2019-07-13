@@ -14,6 +14,7 @@
 // =======================Route For Frontend===================
 Route::group(['namespace' => 'frontend'], function(){
     Route::get('contacts','HomeController@contacts')->name('contacts');
+    Route::get('about','HomeController@aboutUs')->name('about');
     Route::get('/','HomeController@index')->name('/');
 });
 

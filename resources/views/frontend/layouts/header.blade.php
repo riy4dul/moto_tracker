@@ -23,8 +23,8 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <div class="main-menu">
                                     <ul class="nav navbar-nav navbar-right">  
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
+                                        <li class="{{ Request::is('/') ? 'active' : ''}}"><a href="{{route('/')}}">Home</a></li>
+                                        <li class="{{ Request::is('about') ? 'active' : ''}}"><a href="{{route('about')}}">About Us</a></li>
                                         <li><a href="#">Products</a></li>
                                         <li><a href="#">Price & Package</a></li>
                                         <li><a href="{{route('contacts')}}">Contact</a></li>

@@ -18,4 +18,9 @@ class HomeController extends Controller
     public function contacts(){
     	return view('frontend.contacts');
     }
+    public function aboutUs(){
+    	$clients = home_page_client::all();
+    	return view('frontend.about-us',compact('clients'));
+    }
+    
 }

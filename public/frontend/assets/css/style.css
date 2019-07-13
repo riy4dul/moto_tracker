@@ -1879,7 +1879,8 @@ img {
     margin: 0 auto;
 }
 .banner-man-bg {
-    background-image: url(assets/img/banner-man-bg.png);
+    background-image: url(../img/banner-man-bg.png);
+    /*background-image: url(assets/img/banner-man-bg.png);*/
 }
 .banner-boxed span {
     color: #00299b;
