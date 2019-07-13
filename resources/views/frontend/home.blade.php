@@ -149,7 +149,7 @@
                 <div class="services-item-two">
                     <div class="services-item-mask">
                         <div class="pic">
-                            <img src="{{asset('')}}frontend/assets/img/services-img-one.jpg" alt="Image">
+                            <img src="{{asset('frontend/assets/img/services/'.$service->photo)}}" alt="Image">
                             <ul class="single-links">
                                 <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
                             </ul>

@@ -26,12 +26,12 @@
 			<div class="collapsible-body">
 				<ul class="collapsible collapsible-sub" data-collapsible="accordion">
 					<li>
-						<a class="collapsible-body {{ Request::is('home-slider') ? 'active' : ''}}" href="{{route('homeSlider')}}"  data-i18n="">
+						<a class="collapsible-body {{ Request::is('home-slider*') ? 'active' : ''}}" href="{{route('homeSlider')}}"  data-i18n="">
 							<i class="material-icons">radio_button_unchecked</i>
 							<span>Slider</span>
 						</a>
 					</li>
-					<li><a class="collapsible-body {{ Request::is('home-services') ? 'active' : ''}}" href="{{route('homeServices')}}" data-i18n="">
+					<li><a class="collapsible-body {{ Request::is('home-services*') ? 'active' : ''}}" href="{{route('homeServices')}}" data-i18n="">
 						<i class="material-icons">radio_button_unchecked</i>
 						<span>Services</span></a>
 					</li>

@@ -5,7 +5,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\home_page_client;
+use App\backend\HomePageServices;
 use Brian2694\Toastr\Facades\Toastr;
+use Intervention\Image\Facades\Image;
 class HomePageController extends Controller
 {
     /**
@@ -22,19 +24,75 @@ class HomePageController extends Controller
     {
         return view('backend.home-slider');
     }
-
+// ========================services start======================================
     public function services()
     {
-        return view('backend.home-services-and-features');
+        $services=HomePageServices::all();
+        return view('backend.home-services-and-features', compact('services'));
     }
+
+    public function servicesAdd()
+    {
+         return view('backend.services.home-add-services');
+    }
+    
+     public function servicesStore(Request $request)
+    {
+         $this->validate($request,[
+            'title'=> 'required',
+            'sub_title'=> 'required',
+            'description'=> 'required',
+            'photo'=> 'required|mimes:jpeg,jpg,png'
+             ]);
+          // return $request;
+        $photo = $request->file('photo');
+        $slug = str_slug($request->title);
+        if (isset($photo))
+        {
+            $currentDate = Carbon::now()->toDateString();
+            $photoname = $slug.'-'.$currentDate.'-'.uniqid().'.'. $photo->getClientOriginalExtension();
+            if (!file_exists('frontend/assets/img/services'))
+            {
+                mkdir('frontend/assets/img/services',0777,true);
+            }
+
+            $photo->move('frontend/assets/img/services',$photoname);
+
+        }else{
+            $photoname = "frontend/assets/img/services/default.jpg";
+        }
+
+        $services = new HomePageServices();
+        $services->title=$request->title;
+        $services->sub_title=$request->sub_title;
+        $services->description=$request->description;
+        $services->photo=$photoname;
+        $services->save();
+
+        Toastr::success('service Added','',["positionClass" => "toast-top-right"]);
+        
+        return redirect()->route('homeServices');
+    }
+    
+    public function servicesDestroy($id)
+    {
+        $service = HomePageServices::find($id);
+        if (file_exists('frontend/assets/img/services/'.$service->photo))
+        {
+            unlink('frontend/assets/img/services/'.$service->photo);
+        }
+        $service->delete();
+
+        Toastr::error('Service Deleted',':)',["positionClass" => "toast-top-right"]);
+        return redirect()->route('homeServices');
+    }
+// ========================services End======================================
 
 // ========================clients start======================================
     public function clients()
     {
         
         $clients=home_page_client::all();
-        // return view('backend.product.show-product', compact('products'));
-        // return $clients;
         return view('backend.home-show-clients', compact('clients'));
     }
     public function clientsAdd()
@@ -50,7 +108,7 @@ class HomePageController extends Controller
             'address'=> 'required',
             'photo'=> 'required|mimes:jpeg,jpg,png'
              ]);
-
+        // return $request;
         $photo = $request->file('photo');
         $slug = str_slug($request->name);
         if (isset($photo))
