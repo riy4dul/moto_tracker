@@ -142,6 +142,9 @@
         {{-- <div class="separator-line"></div> --}}
         {{-- =======================my include============ --}}
         <div class="row">
+
+             @foreach ($services as $service)
+
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="services-item-two">
                     <div class="services-item-mask">
@@ -153,16 +156,16 @@
                         </div>
                     </div>
                     <div class="services-item-info">
-                        <h3 class="title">Tran Repair</h3>
-                        <span class="post">Lorem Ipsum</span>
+                        <h3 class="title">{{$service->title}}</h3>
+                        {{-- <span class="post">Lorem Ipsum</span> --}}
                         <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            {{$service->description}}
                         </p>
                     </div>
                 </div>
             </div>
             
-            <div class="col-xs-6 col-sm-4 col-md-3">
+            {{-- <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="services-item-two">
                     <div class="services-item-mask">
                         <div class="pic">
@@ -218,7 +221,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
+            @endforeach
         
             </div>
             {{-- <div class="col-sm-12 col-md-12 text-center">

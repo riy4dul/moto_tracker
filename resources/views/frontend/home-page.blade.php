@@ -9,6 +9,9 @@
 
 <div id="ecommerce-offer">
                             <div class="row">
+
+                               
+
                                 <div class="col s12 m3">
                                     <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3 animate fadeUp">
                                         <div class="card-content center">
@@ -49,6 +52,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+                               
+
                             </div>
                         </div>
 
