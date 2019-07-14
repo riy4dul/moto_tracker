@@ -15,6 +15,7 @@
 Route::group(['namespace' => 'frontend'], function(){
     Route::get('contacts','HomeController@contacts')->name('contacts');
     Route::get('about','HomeController@aboutUs')->name('about');
+    Route::get('price','HomeController@price')->name('price');
     Route::get('/','HomeController@index')->name('/');
 });
 
@@ -30,12 +31,12 @@ Route::get('/logout',function(){
 
 
 
-Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
+    Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
     Route::get('home-page','HomePageController@index')->name('homePage');
 
     Route::get('home-slider','HomePageController@slider')->name('homeSlider');
 
-    
+     //==============services==============
     Route::get('home-services','HomePageController@services')->name('homeServices');
     Route::get('home-services-add','HomePageController@servicesAdd')->name('servicesAdd');
     Route::post('home-services-store','HomePageController@servicesStore')->name('servicesStore');
@@ -51,4 +52,11 @@ Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
 	Route::post('client-add','HomePageController@store')->name('clientStore');
     Route::get('home-clients-add','HomePageController@clientsAdd')->name('clientsAdd');
     Route::post('client-delete/{id}','HomePageController@clientDestroy')->name('clientDelete');
+
+    //==============package and price==============
+    Route::get('package-list','HomePageController@packagelist')->name('package');
+    Route::get('package-add','HomePageController@packageAdd')->name('packageAdd');
+    Route::post('package-store','HomePageController@packageStore')->name('packageStore');
+    Route::post('package-delete/{id}','HomePageController@packageDestroy')->name('packageDestroy');
+    
 });

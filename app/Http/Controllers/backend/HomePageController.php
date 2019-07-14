@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\home_page_client;
 use App\backend\HomePageServices;
+use App\backend\PackageAndPrice;
 use Brian2694\Toastr\Facades\Toastr;
 use Intervention\Image\Facades\Image;
 class HomePageController extends Controller
@@ -24,6 +25,19 @@ class HomePageController extends Controller
     {
         return view('backend.home-slider');
     }
+
+    // ========================About start======================================
+    public function aboutUs()
+    {
+        return view('backend.about-us');
+    }
+// ========================About start======================================
+
+
+
+
+
+
 // ========================services start======================================
     public function services()
     {
@@ -151,11 +165,50 @@ class HomePageController extends Controller
 
 // ========================clients End======================================
 
-
-    public function aboutUs()
+// ========================package start======================================
+    public function packagelist()
     {
-        return view('backend.about-us');
+
+       $packages=PackageAndPrice::all();
+        return view('backend.package.packages-and-price-list',compact('packages'));
     }
+    
+     public function packageStore(Request $request)
+    {
+        $this->validate($request,[
+            'title'=> 'required',
+            'sub_title'=> 'required',
+            'price'=> 'required',
+            'description'=> 'required'
+             ]);
+        
+        $packages = new PackageAndPrice();
+        $packages->title=$request->title;
+        $packages->sub_title=$request->sub_title;
+        $packages->price=$request->price;
+        $packages->description=$request->description;
+        $packages->save();
+
+        Toastr::success('Package Added','',["positionClass" => "toast-top-right"]);
+        
+        return redirect()->route('package');
+    }
+    public function packageAdd()
+    {
+        return view('backend.package.add-package');
+    }
+
+    public function packageDestroy($id)
+    {
+
+      $package = PackageAndPrice::find($id);
+      $package->delete();
+
+       Toastr::error('Package Deleted','',["positionClass" => "toast-top-right"]);
+      return redirect()->route('package');
+    }
+// ========================package end======================================
+
 
     
     /**

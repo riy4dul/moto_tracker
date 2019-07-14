@@ -1,4 +1,4 @@
-{{-- BEGIN: SideNav --}}
+{{--BEGIN: SideNav --}}
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light navbar-full sidenav-active-rounded">
 	<div class="brand-sidebar">
 		<h1 class="logo-wrapper">
@@ -55,14 +55,14 @@
 			<span class="menu-title" data-i18n="">About Us Page</span>
 		</a>
 	</li>
-	<li class="bold">
+	{{-- <li class="bold">
 		<a class="waves-effect waves-cyan " href="#">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">Products Page</span>
 		</a>
-	</li>
+	</li> --}}
 	<li class="bold">
-		<a class="waves-effect waves-cyan " href="#">
+		<a class="waves-effect waves-cyan {{ Request::is('package*') ? 'active' : ''}}" href="{{route('package')}}">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">Price & Package Page</span>
 		</a>
@@ -94,4 +94,4 @@
 	</ul>
 	<div class="navigation-background"></div><a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
 </aside>
-{{-- END: SideNav --}}
+{{-- END: SideNav

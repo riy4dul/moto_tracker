@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 use App\home_page_client;
 use App\backend\HomePageServices;
+use App\backend\PackageAndPrice;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -22,5 +23,11 @@ class HomeController extends Controller
     	$clients = home_page_client::all();
     	return view('frontend.about-us',compact('clients'));
     }
+    // ========================Price start======================================
+    public function price (){
+        $pakages = PackageAndPrice::all();
+        return view('frontend.price-pakage',compact('pakages'));
+    }
+    // ========================Price End======================================
     
 }

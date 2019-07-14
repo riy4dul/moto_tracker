@@ -26,8 +26,8 @@
                                         <li class="{{ Request::is('/') ? 'active' : ''}}"><a href="{{route('/')}}">Home</a></li>
                                         <li class="{{ Request::is('about') ? 'active' : ''}}"><a href="{{route('about')}}">About Us</a></li>
                                         <li><a href="#">Products</a></li>
-                                        <li><a href="#">Price & Package</a></li>
-                                        <li><a href="{{route('contacts')}}">Contact</a></li>
+                                        <li class="{{ Request::is('price') ? 'active' : ''}}" ><a href="{{route('price')}}">Price & Packagee</a></li>
+                                        <li class="{{ Request::is('contacts') ? 'active' : ''}}"><a href="{{route('contacts')}}">Contact</a></li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown-menu">
