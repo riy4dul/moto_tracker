@@ -19,14 +19,14 @@
 											<label for="name3" class="">Title</label>
 										</div>
 									</div>
-									<div class="row">
+									{{-- <div class="row">
 										<div class="input-field col s12">
 											<i class="material-icons prefix">subtitles</i>
 											<input id="sub_title" type="text" name="sub_title" >
 											<span class="text-danger" style="color:red;">{{ $errors->has('sub_title') ? $errors->first('sub_title'):'' }}</span>
 											<label for="sub_title" class="">Sub Title</label>
 										</div>
-									</div>
+									</div> --}}
 									<div class="row">
 										<div class="input-field col s12">
 											<i class="material-icons prefix">attach_money</i>
@@ -37,13 +37,24 @@
 									</div>
 
 									<div class="row">
-										<div class="input-field col s12">
-											<i class="material-icons prefix">description</i>
-											<input id="description" type="text" name="description">
+										<div class="input-field col s12 panel-body">
+											{{-- <i class="material-icons prefix">description</i> --}}
+											<strong>Description</strong>
+											<br>
+											<br>
+											{{-- <input id="description" type="text" name="description"> --}}
+											<textarea  name="description" class="materialize-textarea" data-length="120"></textarea>
 											<span class="text-danger" style="color:red;" >{{ $errors->has('description') ? $errors->first('description'):'' }}</span>
-											<label for="description" class="">Description</label>
 										</div>
 									</div>
+
+									{{-- <div class="row">
+					                    <div class="input-field col s12">
+					                      <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+					                      <label for="textarea1">Textarea</label>
+					                    </div>
+					                  </div> --}}
+
 									<div class="row">
 											<div class="input-field col s12  center">
 												<button class="btn cyan waves-effect waves-light" type="submit">ADD
@@ -51,6 +62,7 @@
 												</button>
 											</div>
 										</div>
+
 									
 									{{-- <div class="row">
 										<div class="input-field col s12">

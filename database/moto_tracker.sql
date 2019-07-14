@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2019 at 02:20 PM
+-- Generation Time: Jul 14, 2019 at 02:12 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -43,10 +43,12 @@ CREATE TABLE `home_page_clients` (
 --
 
 INSERT INTO `home_page_clients` (`id`, `name`, `phone`, `address`, `photo`, `created_at`, `updated_at`) VALUES
-(7, 'Babu', '235487985544', 'Dhaka', 'babu-2019-07-11.png', '2019-07-11 01:20:56', '2019-07-11 01:20:56'),
-(9, 'riyadul', '1232456789', 'dhaka', 'riyadul-2019-07-11.png', '2019-07-11 02:06:00', '2019-07-11 02:06:00'),
-(10, 'Rabbi', '0165755424', 'asdjlakl', 'rabbi-2019-07-11.png', '2019-07-11 02:06:58', '2019-07-11 02:06:58'),
-(11, 'nasrin', '015676556322', 'dhaka', 'nasrin-2019-07-11.png', '2019-07-11 02:08:03', '2019-07-11 02:08:03');
+(13, 'Client', '0000000000', 'Dhaka', 'client-2019-07-14.png', '2019-07-14 05:21:04', '2019-07-14 05:21:04'),
+(14, 'Client 2', '0000000000', 'Dhaka', 'client-2-2019-07-14.png', '2019-07-14 05:22:00', '2019-07-14 05:22:00'),
+(15, 'Client 3', '0000000000', 'Dhaka', 'client-3-2019-07-14.png', '2019-07-14 05:22:44', '2019-07-14 05:22:44'),
+(16, 'Client 4', '0000000000', 'Dhaka', 'client-4-2019-07-14.png', '2019-07-14 05:23:11', '2019-07-14 05:23:11'),
+(17, 'Client 5', '0000000000', 'Dhaka', 'client-5-2019-07-14.png', '2019-07-14 05:23:43', '2019-07-14 05:23:43'),
+(18, 'Client 6', '0000000000', 'Dhaka', 'client-6-2019-07-14.png', '2019-07-14 05:25:49', '2019-07-14 05:25:49');
 
 -- --------------------------------------------------------
 
@@ -91,7 +93,34 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_07_10_091023_create_home_page_clients_table', 2),
-(4, '2019_07_13_052055_create_home_page_services_table', 3);
+(4, '2019_07_13_052055_create_home_page_services_table', 3),
+(5, '2019_07_14_053724_create_package_and_prices_table', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `package_and_prices`
+--
+
+CREATE TABLE `package_and_prices` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` int(11) NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `package_and_prices`
+--
+
+INSERT INTO `package_and_prices` (`id`, `title`, `sub_title`, `price`, `description`, `created_at`, `updated_at`) VALUES
+(4, 'Basic', 'Regular Price 4500tk Only', 350, '<p>Daily fuel consumption record<br />Real-time live tracking<br />Engine on/off alert<br />GEO-Fence alert<br />Speed alert<br />1 Year Service Warranty</p>', '2019-07-14 05:08:34', '2019-07-14 05:08:34'),
+(5, 'Bike', NULL, 350, '<p>Daily fuel consumption record<br />Real-time live tracking<br />Engine on/off alert<br />GEO-Fence alert<br />Speed alert<br />1 Year Service Warranty</p>', '2019-07-14 05:13:29', '2019-07-14 05:13:29'),
+(6, 'Standerd', NULL, 550, '<p>Daily fuel consumption record<br />Real-time live tracking<br />Engine on/off alert<br />GEO-Fence alert<br />Speed alert<br />1 Year Service Warranty</p>', '2019-07-14 05:14:32', '2019-07-14 05:14:32'),
+(7, 'Premium', NULL, 750, '<p>Daily fuel consumption record<br />Real-time live tracking<br />Engine on/off alert<br />GEO-Fence alert<br />Speed alert<br />1 Year Service Warranty</p>', '2019-07-14 05:15:05', '2019-07-14 05:15:05');
 
 -- --------------------------------------------------------
 
@@ -153,6 +182,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `package_and_prices`
+--
+ALTER TABLE `package_and_prices`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -173,7 +208,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `home_page_clients`
 --
 ALTER TABLE `home_page_clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `home_page_services`
@@ -185,7 +220,13 @@ ALTER TABLE `home_page_services`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `package_and_prices`
+--
+ALTER TABLE `package_and_prices`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`

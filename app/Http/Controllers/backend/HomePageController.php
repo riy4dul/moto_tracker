@@ -177,7 +177,7 @@ class HomePageController extends Controller
     {
         $this->validate($request,[
             'title'=> 'required',
-            'sub_title'=> 'required',
+            // 'sub_title'=> 'required',
             'price'=> 'required',
             'description'=> 'required'
              ]);

@@ -30,7 +30,7 @@
                             </div>
                             <ul class="pricing-content">
                                 {{-- <li>{{$pakage->sub_title}}</li> --}}
-                                <li>{{$pakage->description}}</li>
+                                <li>{!! $pakage->description !!}</li>
                             </ul>
                             {{-- <a href="#" class="pricingTable-signup">Sign Up</a> --}}
                         </div>

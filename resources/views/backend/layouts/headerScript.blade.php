@@ -19,3 +19,12 @@
 <!-- END: Custom CSS-->
 
 <link rel="stylesheet" href="{{asset('')}}backend/app-assets/css/toastr.min.css">
+
+<script src="https://cdn.tiny.cloud/1/vp4099m2ymj19hxwrmtry6e8i1m73qxpenrzfxvw6tc2vqdb/tinymce/5/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector : "textarea",
+        plugins : ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste jbimages"],
+        toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+    });
+</script>

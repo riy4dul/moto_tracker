@@ -25,7 +25,7 @@
                                     <ul class="nav navbar-nav navbar-right">  
                                         <li class="{{ Request::is('/') ? 'active' : ''}}"><a href="{{route('/')}}">Home</a></li>
                                         <li class="{{ Request::is('about') ? 'active' : ''}}"><a href="{{route('about')}}">About Us</a></li>
-                                        <li><a href="#">Products</a></li>
+                                        {{-- <li><a href="#">Products</a></li> --}}
                                         <li class="{{ Request::is('price') ? 'active' : ''}}" ><a href="{{route('price')}}">Price & Packagee</a></li>
                                         <li class="{{ Request::is('contacts') ? 'active' : ''}}"><a href="{{route('contacts')}}">Contact</a></li>
                                         <li class="dropdown">

@@ -25,7 +25,7 @@
 											<th>SL </th>
 											<th>Title </th>
 											<th>pricie </th>
-											<th>Subtitle</th>
+											{{-- <th>Subtitle</th> --}}
 											<th>Description</th>
 											<th>Action</th>
 										</tr>
@@ -36,8 +36,8 @@
 											<td>{{$key + 1}}</td>
 											<td>{{$package->title}}</td>
 											<td>{{$package->price}}</td>
-											<td>{{$package->sub_title}}</td>
-											<td>{{$package->description}}</td>
+											{{-- <td>{{$package->sub_title}}</td> --}}
+											<td>{!!$package->description!!}</td>
 											<td>
 												{{-- <a class="btn-floating mb-1 btn-medium waves-effect waves-light red">
 													<i class="material-icons">delete</i>

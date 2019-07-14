@@ -28,3 +28,4 @@ toastr.error('{{ $error }}');
 @endforeach
 @endif
 {!! Toastr::message() !!}
+
