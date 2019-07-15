@@ -49,12 +49,7 @@
 			<span class="menu-title" data-i18n="">Home Page</span>
 		</a>
 	</li> --}}
-	<li class="bold">
-		<a class="waves-effect waves-cyan {{ Request::is('about-us') ? 'active' : ''}}" href="{{route('aboutUs')}}">
-			<i class="material-icons">settings_input_svideo</i>
-			<span class="menu-title" data-i18n="">About Us Page</span>
-		</a>
-	</li>
+	
 	{{-- <li class="bold">
 		<a class="waves-effect waves-cyan " href="#">
 			<i class="material-icons">settings_input_svideo</i>
@@ -67,31 +62,38 @@
 			<span class="menu-title" data-i18n="">Price & Package Page</span>
 		</a>
 	</li>
+	
 	<li class="bold">
-		<a class="waves-effect waves-cyan " href="#">
-			<i class="material-icons">settings_input_svideo</i>
-			<span class="menu-title" data-i18n="">Contact Page</span>
-		</a>
-	</li>
-	<li class="bold">
-		<a class="waves-effect waves-cyan " href="#">
+		<a class="waves-effect waves-cyan {{ Request::is('software*') ? 'active' : ''}}" href="{{route('softwareList')}}">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">Software Page</span>
 		</a>
 	</li>
-	<li class="bold">
+	{{-- <li class="bold">
 		<a class="waves-effect waves-cyan " href="#">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">Demo Page</span>
 		</a>
-	</li>
-	<li class="bold">
+	</li> --}}
+	{{-- <li class="bold">
 		<a class="waves-effect waves-cyan " href="#">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">Login Page</span>
 		</a>
-	</li>
+	</li> --}}
+	{{-- <li class="bold">
+		<a class="waves-effect waves-cyan {{ Request::is('about-us') ? 'active' : ''}}" href="{{route('aboutUs')}}">
+			<i class="material-icons">settings_input_svideo</i>
+			<span class="menu-title" data-i18n="">About Us Page</span>
+		</a>
+	</li> --}}
+	{{-- <li class="bold">
+		<a class="waves-effect waves-cyan " href="#">
+			<i class="material-icons">settings_input_svideo</i>
+			<span class="menu-title" data-i18n="">Contact Page</span>
+		</a>
+	</li> --}}
 	</ul>
 	<div class="navigation-background"></div><a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
 </aside>
-{{-- END: SideNav
+{{-- END: SideNav--}}

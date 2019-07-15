@@ -1,3 +1,4 @@
+
 <div class="main-menu-area" data-spy="affix" data-offset-top="55">
             <div class="container"> 
                 <div class="row"> 
@@ -31,13 +32,20 @@
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="#">User Menual</a></li>
-                                                <li><a href="#">Android App</a></li>
-                                                <li><a href="#">Apple APP</a></li>
+                                                {{-- <li><a href="#">User Menual</a></li> --}}
+                                                <li><a href="frontend/assets/user_manual/{{$software->user_manual}}">User Menual</a></li>
+                                                <li><a href="{{$software->android_app_link }}">Android App</a></li>
+                                                <li><a href="{{$software->apple_app_link }}">Apple APP</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Demo</a></li>
-                                        <li><a href="#">Login</a></li>
+                                        <li ><a href="http://139.59.7.60/">Demo</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">login <i class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="http://139.59.7.60/">Server 1</a></li>
+                                                <li><a href="http://139.59.7.60/">Server 2</a></li>
+                                            </ul>
+                                        </li>
                                         
                                     </ul>
                                 </div>

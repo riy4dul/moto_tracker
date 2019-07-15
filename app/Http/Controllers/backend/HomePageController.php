@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\home_page_client;
 use App\backend\HomePageServices;
 use App\backend\PackageAndPrice;
+use App\backend\software;
 use Brian2694\Toastr\Facades\Toastr;
 use Intervention\Image\Facades\Image;
 class HomePageController extends Controller
@@ -210,31 +211,47 @@ class HomePageController extends Controller
 // ========================package end======================================
 
 
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    // public function create()
-    // {
-    //     return ("create page");
-    // }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    
+// ========================Software start======================================
+public function softwareList()
+    {
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+       $softwares=software::all();
+        return view('backend.software.software-list',compact('softwares'));
+    }
+
+public function softwareEdit($id)
+    {
+       $software = software::find($id);
+       return view('backend.software.software-edit',compact('software'));
+    }
+public function softwareUpdate(Request $request)
+    {
+        // return $request;
+        $software = software::find($request->id);
+        $manual =$request->file('user_manual');
+        if (isset($manual))
+        {
+            unlink('frontend/assets/user_manual/'.$software->user_manual);
+            $currentDate = Carbon::now()->toDateString();
+            $manualname = $currentDate.'-'.uniqid().'.'. $manual->getClientOriginalExtension();
+            $manual->move('frontend/assets/user_manual/',$manualname);
+        }else{
+            $manualname = $software->user_manual;
+        }
+        //return $request;
+        $software = software::find($request->id);
+        $software->user_manual=$manualname;
+        $software->apple_app_link=$request->apple_app_link;
+        $software->android_app_link=$request->android_app_link;
+        $software->save();
+
+        Toastr::success('Software Update','Success',["positionClass" => "toast-top-right"]);
+        return redirect()->route('softwareList');
+    }
+
+// ========================Software end======================================
+   
     public function show($id)
     {
         //

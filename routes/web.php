@@ -30,7 +30,7 @@ Route::get('/logout',function(){
 
 
 
-
+// =======================Route For Backend===================
     Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
     Route::get('home-page','HomePageController@index')->name('homePage');
 
@@ -58,5 +58,11 @@ Route::get('/logout',function(){
     Route::get('package-add','HomePageController@packageAdd')->name('packageAdd');
     Route::post('package-store','HomePageController@packageStore')->name('packageStore');
     Route::post('package-delete/{id}','HomePageController@packageDestroy')->name('packageDestroy');
+
+    //==============Software==============
+     Route::get('software-list','HomePageController@softwareList')->name('softwareList');
+     Route::get('software-edit/{id}','HomePageController@softwareEdit')->name('softwareEdit');
+     // Route::get('software-edit','HomePageController@softwareEdit')->name('softwareEdit');
+     Route::post('software-update','HomePageController@softwareUpdate')->name('softwareUpdate');
     
 });
