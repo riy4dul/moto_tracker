@@ -876,15 +876,15 @@ img {
 /* 	============= 
 	Default Slider CSS 
 	======================= */
-.slide-bg-1 {
-    background-image: url(assets/img/slide-bg-1.jpg);
+/*.slide-bg-1 {
+    background-image: url(../img/slider/slide-bg-1.jpg);
 }
 .slide-bg-2 {
-    background-image: url(assets/img/slide-bg-2.jpg);
+    background-image: url(../img/slider/slide-bg-2.jpg);
 }
 .slide-bg-3 {
-    background-image: url(assets/img/slide-bg-3.jpg);
-}
+    background-image: url(../img/slider/slide-bg-3.jpg);
+}*/
 .swiper-slide {
     height: 720px;
     background-size: cover;

@@ -1,3 +1,7 @@
+<!-- jQuery min js -->
+<script src="{{asset('')}}frontend/assets/js/jquery.2.1.4.min.js"></script>
+<!-- Bootstrap JS file -->
+		<script src="{{asset('frontend/assets/js/proper.min.js')}}"></script>
 <!-- Bootstrap JS file -->
 <script src="{{asset('')}}frontend/assets/js/bootstrap.min.js"></script>
 <!-- Owl-Carousel JS file -->

@@ -1,69 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-{{-- <!-- Start Homepage Slider -->
-<div class="homepage-slides-wrapper">
-    <!-- Slider main container -->
-    <div class="swiper-container swiper1">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide slide-bg-1">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="swiper-slide slide-bg-2">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="swiper-slide slide-bg-3">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination swiper-pagination1"></div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
-</div>
-<!-- End Homepage Slider --> --}}
 <!-- Start Homepage Slider -->
 <div class="homepage-slides-wrapper">
     <!-- Slider main container -->
@@ -71,53 +8,24 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide slide-bg-1">
+            {{-- {{dd($sliders)}} --}}
+            @foreach($sliders as $slider)
+            <div class="swiper-slide" style="background-image: url('{{URL::asset('frontend/assets/img/slider/'.$slider->photo)}}');">
                 <div class="d-table">
                     <div class="d-table-cell">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
+                                    <h1>{{$slider->title_en}}</h1>
+                                    <p>{{$slider->sub_title_en}}</p>
+                                    {{-- <a class="btn theme-btn" href="appointment.html">make an appointment</a> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="swiper-slide slide-bg-2">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="swiper-slide slide-bg-3">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-6">
-                                    <h1>With over 25 years of experience in auto services work</h1>
-                                    <p>Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.</p>
-                                    <a class="btn theme-btn" href="appointment.html">make an appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination swiper-pagination1"></div>
@@ -127,6 +35,9 @@
     </div>
 </div>
 <!-- End Homepage Slider -->
+
+
+
 <!-- Start Services Area -->
 <div class="content-block-area">
     <div class="container">

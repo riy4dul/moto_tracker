@@ -19,14 +19,14 @@
 											<label for="name3" class="">Title</label>
 										</div>
 									</div>
-									<div class="row">
+									{{-- <div class="row">
 										<div class="input-field col s12">
 											<i class="material-icons prefix">local_phone</i>
 											<input id="sub_title" type="text" name="sub_title" >
 											<span class="text-danger" style="color:red;">{{ $errors->has('sub_title') ? $errors->first('sub_title'):'' }}</span>
 											<label for="sub_title" class="">Sub Title</label>
 										</div>
-									</div>
+									</div> --}}
 									<div class="row">
 										<div class="input-field col s12">
 											<i class="material-icons prefix">location_on</i>

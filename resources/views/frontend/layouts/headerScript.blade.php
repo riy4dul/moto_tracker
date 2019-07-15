@@ -23,4 +23,6 @@
 <!-- Responsive CSS -->
 <link rel="stylesheet" href="{{asset('')}}frontend/assets/css/responsive.css">
 <!-- jQuery min js -->
-<script src="{{asset('')}}frontend/assets/js/jquery-1.12.4.min.js"></script>
+{{-- <script src="{{asset('')}}frontend/assets/js/jquery-1.12.4.min.js"></script> --}}
+
+
