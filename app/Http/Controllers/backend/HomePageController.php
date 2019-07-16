@@ -143,7 +143,6 @@ class HomePageController extends Controller
     {
          $this->validate($request,[
             'title'=> 'required',
-            'sub_title'=> 'required',
             'description'=> 'required',
             'photo'=> 'required|mimes:jpeg,jpg,png'
              ]);

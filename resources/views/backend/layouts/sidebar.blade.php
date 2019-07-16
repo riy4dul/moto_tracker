@@ -20,7 +20,7 @@
 		</li>
 		<li class="bold {{ Request::is('home*') ? 'open' : ''}} {{ Request::is('home*') ? 'active' : ''}}">
 			<a class="collapsible-header waves-effect waves-cyan " href="#" tabindex="0">
-				<i class="material-icons">settings_input_svideo</i>
+				<i class="material-icons">home</i>
 				<span class="menu-title" data-i18n="">Home Page</span>
 			</a>
 			<div class="collapsible-body">
@@ -58,14 +58,14 @@
 	</li> --}}
 	<li class="bold">
 		<a class="waves-effect waves-cyan {{ Request::is('package*') ? 'active' : ''}}" href="{{route('package')}}">
-			<i class="material-icons">settings_input_svideo</i>
+			<i class="material-icons">attach_money</i>
 			<span class="menu-title" data-i18n="">Price & Package Page</span>
 		</a>
 	</li>
 	
 	<li class="bold">
 		<a class="waves-effect waves-cyan {{ Request::is('software*') ? 'active' : ''}}" href="{{route('softwareList')}}">
-			<i class="material-icons">settings_input_svideo</i>
+			<i class="material-icons">settings_cell</i>
 			<span class="menu-title" data-i18n="">Software Page</span>
 		</a>
 	</li>
@@ -83,7 +83,7 @@
 	</li> --}}
 	<li class="bold">
 		<a class="waves-effect waves-cyan {{ Request::is('about-*') ? 'active' : ''}}" href="{{route('aboutUs')}}">
-			<i class="material-icons">settings_input_svideo</i>
+			<i class="material-icons">supervisor_account</i>
 			<span class="menu-title" data-i18n="">About Us Page</span>
 		</a>
 	</li>

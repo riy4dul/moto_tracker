@@ -36,10 +36,39 @@
 </div>
 <!-- End Homepage Slider -->
 
+<!-- Start Services Area -->
+        <div class="content-block-area">
+            <div class="container">
+                <div class="row">
+                             @foreach ($services as $service)
+                    <div class="col-sm-6 col-md-4">
+                        <div class="services-item-two">
+                            <div class="services-item-mask">
+                                <div class="pic">
+                                    <img src="{{asset('frontend/assets/img/services/'.$service->photo)}}" alt="Image">
+                                    {{-- <ul class="single-links">
+                                        <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
+                                    </ul> --}}
+                                </div>
+                            </div>
+                            <div class="services-item-info">
+                                <h3 class="title">{{$service->title}}</h3>
+                                {{-- <span class="post">Lorem Ipsum</span> --}}
+                                <p class="description">
+                                    {{$service->description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                            @endforeach
+            </div>
+            
+        </div>
+        <!-- End Services Area -->
 
 
 <!-- Start Services Area -->
-<div class="content-block-area">
+{{-- <div class="content-block-area">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -50,98 +79,29 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="separator-line"></div> --}}
-        {{-- =======================my include============ --}}
         <div class="row">
 
              @foreach ($services as $service)
-
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="services-item-two">
                     <div class="services-item-mask">
                         <div class="pic">
                             <img src="{{asset('frontend/assets/img/services/'.$service->photo)}}" alt="Image">
-                            <ul class="single-links">
-                                <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="services-item-info">
                         <h3 class="title">{{$service->title}}</h3>
-                        {{-- <span class="post">Lorem Ipsum</span> --}}
                         <p class="description">
                             {{$service->description}}
                         </p>
                     </div>
                 </div>
             </div>
-            
-            {{-- <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="services-item-two">
-                    <div class="services-item-mask">
-                        <div class="pic">
-                            <img src="{{asset('')}}frontend/assets/img/services-img-two.jpg" alt="Image">
-                            <ul class="single-links">
-                                <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services-item-info">
-                        <h3 class="title">Suspension Repair</h3>
-                        <span class="post">Lorem Ipsum</span>
-                        <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industryy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="services-item-two">
-                    <div class="services-item-mask">
-                        <div class="pic">
-                            <img src="{{asset('')}}frontend/assets/img/services-img-two.jpg" alt="Image">
-                            <ul class="single-links">
-                                <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services-item-info">
-                        <h3 class="title">Suspension Repair</h3>
-                        <span class="post">Lorem Ipsum</span>
-                        <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industryy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="services-item-two">
-                    <div class="services-item-mask">
-                        <div class="pic">
-                            <img src="{{asset('')}}frontend/assets/img/services-img-two.jpg" alt="Image">
-                            <ul class="single-links">
-                                <li><a href="#">Read more <i class="fa fa-long-arrow-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services-item-info">
-                        <h3 class="title">Suspension Repair</h3>
-                        <span class="post">Lorem Ipsum</span>
-                        <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industryy.
-                        </p>
-                    </div>
-                </div>
-            </div> --}}
-
             @endforeach
         
             </div>
-            {{-- <div class="col-sm-12 col-md-12 text-center">
-                <a href="#" id="loadmore" class="btn theme-btn">view more</a>
-            </div> --}}
         </div>
-    </div>
+    </div> --}}
     <!-- End Services Area -->
     
     <!-- Start Our Parners Area -->

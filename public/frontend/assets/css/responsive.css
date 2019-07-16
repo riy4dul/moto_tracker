@@ -101,7 +101,8 @@
         line-height: 55px;
     }
     .content-block-area {
-        padding: 60px 0;
+        padding: 60px 0 0 0;
+        /*padding: 60px 0;*/
     }
     .body-service-boxed-item.auto-body-bg {
         height: 400px;
@@ -210,7 +211,8 @@
         margin: 0 5px;
     }
     .content-block-area {
-        padding: 40px 0;
+        padding: 40px 0 0 0;
+        /*padding: 40px 0;*/
     }
     .homepage-slides-wrapper {
         text-align: center;

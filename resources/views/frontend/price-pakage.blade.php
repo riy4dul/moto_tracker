@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <!-- Start Breadcumbs Area -->
-<div class="breadcumbs-area breadcumbs-bg-2 bc-area-padding">
+<div class="breadcumbs-area  bc-area-padding" style="background-image: url('{{URL::asset('frontend/assets/img/breadcumbs-bg-2.jpg')}}');" >
 	<div class="d-table">
 		<div class="d-table-cell">
 			<div class="container">

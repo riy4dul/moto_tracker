@@ -33,7 +33,7 @@
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown-menu">
                                                 {{-- <li><a href="#">User Menual</a></li> --}}
-                                                <li><a href="frontend/assets/user_manual/{{$software->user_manual}}">User Menual</a></li>
+                                                <li><a href="frontend/assets/user_manual/{{$software->user_manual}}" >User Menual</a></li>
                                                 <li><a href="{{$software->android_app_link }}">Android App</a></li>
                                                 <li><a href="{{$software->apple_app_link }}">Apple APP</a></li>
                                             </ul>

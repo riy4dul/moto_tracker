@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2019 at 07:56 AM
+-- Generation Time: Jul 16, 2019 at 02:48 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -46,7 +46,7 @@ CREATE TABLE `abouts` (
 --
 
 INSERT INTO `abouts` (`id`, `title_bn`, `title_en`, `sub_title_bn`, `sub_title_en`, `description_bn`, `description_en`, `photo`, `created_at`, `updated_at`) VALUES
-(1, '', 'our customer over 25 years!!', '', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perfer repudiandae nostrum alias quibusdam!</p>', '', '<p>No singulis postulant his, per decore elaboraret sadipscing Id namwisi accusamus dolro ametmoderatius, denique mediocrem voluptatum. per decore elaboraret sadipscing te labitursaperetnec amet. Eos in quis eripuit. Minim theophrastus eum id. Eos an graece libris inter- esset. Eu duo mentitum maluisset</p>', 'fdsaf', NULL, '2019-07-15 23:56:08');
+(1, '', 'our customer over 25 years!!', '', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perfer repudiandae nostrum alias quibusdam!</p>', '', '<p>No singulis postulant his, per decore elaboraret sadipscing Id namwisi accusamus dolro ametmoderatius, denique mediocrem voluptatum. per decore elaboraret sadipscing te labitursaperetnec amet. Eos in quis eripuit. Minim theophrastus eum id. Eos an graece libris inter- esset. Eu duo mentitum maluisset</p>', '2019-07-16-5d2d6fc807b77.png', NULL, '2019-07-16 00:33:55');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `home_page_services` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -97,7 +97,12 @@ CREATE TABLE `home_page_services` (
 --
 
 INSERT INTO `home_page_services` (`id`, `title`, `sub_title`, `description`, `photo`, `created_at`, `updated_at`) VALUES
-(11, 'tttttttt', 'ssssssss', 'sdfaffdd', 'tttttttt-2019-07-15-5d2c74870cb2f.jpg', '2019-07-15 06:41:43', '2019-07-15 06:41:43');
+(12, 'Real Time Tracking', NULL, 'Track your vehicle’s real time for specific time with your device with just one click.Signals that a GPS device constantly receives from the satellite, the movement of the person or vehicle can be tracked.', 'real-time-tracking-2019-07-16-5d2d94fa62f07.png', '2019-07-16 03:12:26', '2019-07-16 03:12:26'),
+(13, 'Engine On/Off Alert', NULL, 'Get real time engine On/Off alerts and also see the engine status of your vehicle. This is a unique feature of Darpan GPS tracking which no one else is offering.', 'engine-onoff-alert-2019-07-16-5d2d9752da109.jpg', '2019-07-16 03:22:26', '2019-07-16 03:22:26'),
+(14, 'Fuel Monitoring', NULL, 'Fuel Monitor is your assistant to help keeping an eye on the cost for car: fuel consumption, cost per miles/km, fuels, services and repairs', 'fuel-monitoring-2019-07-16-5d2d98e6be48b.jpg', '2019-07-16 03:29:10', '2019-07-16 03:29:10'),
+(15, 'Customization Support', NULL, 'We provide service based solution to clients with good results. We are delivering the right solutions at the right price to our customers', 'customization-support-2019-07-16-5d2d9c144130b.jpg', '2019-07-16 03:42:44', '2019-07-16 03:42:44'),
+(16, 'History Route Playback', NULL, 'Keeping track of persons, pets, and even vehicles are made possible today, thanks to GPS technology.', 'history-route-playback-2019-07-16-5d2db5177e2b0.jpg', '2019-07-16 05:29:27', '2019-07-16 05:29:27'),
+(17, 'Fuel Monitoring', NULL, 'Fuel Monitor is your assistant to help keeping an eye on the cost for car: fuel consumption, cost per miles/km, fuels, services and repairs', 'fuel-monitoring-2019-07-16-5d2db55a217b0.jpg', '2019-07-16 05:30:34', '2019-07-16 05:30:34');
 
 -- --------------------------------------------------------
 
@@ -185,9 +190,9 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `title_bn`, `title_en`, `sub_title_bn`, `sub_title_en`, `photo`, `created_at`, `updated_at`) VALUES
-(1, NULL, '11111111111111111', NULL, '11111111111111', 'slide-bg-1.jpg', NULL, NULL),
-(2, NULL, '222222222222222', NULL, '2222222222222222', 'slide-bg-2.jpg', NULL, NULL),
-(3, NULL, 'With over 25 years of experience in auto services work', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.', 'slide-bg-3.jpg', NULL, NULL);
+(1, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f1881b1a.jpg', '2019-07-16 03:55:36', '2019-07-16 03:55:36'),
+(2, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f3bc1281.jpg', '2019-07-16 03:56:11', '2019-07-16 03:56:11'),
+(3, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f5226a5e.jpg', '2019-07-16 03:56:34', '2019-07-16 03:56:34');
 
 -- --------------------------------------------------------
 
@@ -315,7 +320,7 @@ ALTER TABLE `home_page_clients`
 -- AUTO_INCREMENT for table `home_page_services`
 --
 ALTER TABLE `home_page_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `migrations`

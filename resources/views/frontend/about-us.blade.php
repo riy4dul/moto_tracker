@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <!-- Start Breadcumbs Area -->
-<div class="breadcumbs-area breadcumbs-bg-2 bc-area-padding">
+<div class="breadcumbs-area bc-area-padding" style="background-image: url('{{URL::asset('frontend/assets/img/about/breadcumbs-bg-1.jpg')}}');">
 	<div class="d-table">
 		<div class="d-table-cell">
 			<div class="container">
@@ -26,17 +26,12 @@
                     </div>
                     <div class="col-md-7">
                         <div class="banner-boxed">
-
-                           
                             <h2>
                              <span>{{$about->title_en}}</span>
                             </h2>
                             <p class="subtitle">{!!$about->sub_title_en !!}</p>
                             <p> {!! $about->description_en !!}</p>
-                           
                         </div>
-
-
                     </div>
                 </div>
             </div>

@@ -23,15 +23,15 @@
 								<tr>
 									<td>{{$key + 1}}</td>
 									<td>
-										<a href="frontend/assets/user_manual/{{$software->user_manual}}".><img src="{{asset('backend/app-assets/images/icon/pdf.png')}}" alt="" height="15%" width="15%"></a>
+										<a href="frontend/assets/user_manual/{{$software->user_manual}}".><img src="{{asset('backend/app-assets/images/icon/pdf.png')}}" alt=""  width="35%"></a>
 										{{-- {{$software->user_manual}} --}}
 									</td>
 									<td>
-										<a href="{{$software->android_app_link }}"><img src="{{asset('backend/app-assets/images/icon/android.png')}}" alt="" height="15%" width="50%"></a>
+										<a href="{{$software->android_app_link }}"><img src="{{asset('backend/app-assets/images/icon/android.png')}}" alt=""  width="50%"></a>
 										
 									</td>
 									<td>
-										<a href="{{$software->apple_app_link }}"><img src="{{asset('backend/app-assets/images/icon/apple.png')}}" alt="" height="15%" width="30%"></a>
+										<a href="{{$software->apple_app_link }}"><img src="{{asset('backend/app-assets/images/icon/apple.png')}}" alt=""  width="30%"></a>
 									</td>
 									<td>
 										<a href="{{route('softwareEdit',$software->id)}}">

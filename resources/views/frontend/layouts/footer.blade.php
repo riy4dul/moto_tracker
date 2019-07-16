@@ -50,9 +50,9 @@
                                     <div class="footer-wid footer-menu">
                                         <h3 class="footer-wid-title">Approve By</h3>
                                         <ul>
-                                            <li><i class="fa  fa-angle-right"></i> Monday:7:30am - 5:30pm</li>
-                                            <li><i class="fa  fa-angle-right"></i> Tuesday:7:30am - 5:30pm</li>
-                                            <li><i class="fa  fa-angle-right"></i> Wednesday:7:30am - 5:30pm</li>
+                                            <img src="{{asset('')}}frontend/assets/img/approve/vivacom-min.png" alt="Logo">
+                                            <img src="{{asset('')}}frontend/assets/img/approve/VTS-PAB-Vehicle-Tracking-Service-Providers-Association-Bangladesh-min.png" alt="Logo">
+                                            <img src="{{asset('')}}frontend/assets/img/approve/BTRC_logo-3-3-min.png" alt="Logo">
                                     </div>
                                 </div>
 
