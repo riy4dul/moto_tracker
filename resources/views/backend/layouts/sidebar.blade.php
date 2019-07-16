@@ -81,12 +81,12 @@
 			<span class="menu-title" data-i18n="">Login Page</span>
 		</a>
 	</li> --}}
-	{{-- <li class="bold">
+	<li class="bold">
 		<a class="waves-effect waves-cyan {{ Request::is('about-us') ? 'active' : ''}}" href="{{route('aboutUs')}}">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">About Us Page</span>
 		</a>
-	</li> --}}
+	</li>
 	{{-- <li class="bold">
 		<a class="waves-effect waves-cyan " href="#">
 			<i class="material-icons">settings_input_svideo</i>

@@ -8,6 +8,7 @@ use App\home_page_client;
 use App\backend\HomePageServices;
 use App\backend\PackageAndPrice;
 use App\backend\software;
+use App\backend\About;
 use Brian2694\Toastr\Facades\Toastr;
 use Intervention\Image\Facades\Image;
 class HomePageController extends Controller
@@ -30,7 +31,41 @@ class HomePageController extends Controller
     // ========================About start======================================
     public function aboutUs()
     {
-        return view('backend.about-us');
+         $abouts = About::all();
+         // return $abouts;
+        return view('backend.about.about-us',compact('abouts'));
+    }
+    
+    
+    public function aboutEdit($id)
+    {
+       $about = About::find($id);
+       return view('backend.about.about-edit',compact('about'));
+    }
+
+    public function aboutUpdate(Request $request){
+         // return $request;
+        $about = About::find($request->id);
+        $photo =$request->file('photo');
+        if (isset($photo))
+        {
+            unlink('frontend/assets/img/about/'.$about->photo);
+            $currentDate = Carbon::now()->toDateString();
+            $photoname = $currentDate.'-'.uniqid().'.'. $photo->getClientOriginalExtension();
+            $photo->move('frontend/assets/img/about/',$photoname);
+        }else{
+            $photoname = $about->photo;
+        }
+        //return $request;
+        $about = About::find($request->id);
+        $about->photo=$photoname;
+        $about->title_en=$request->title_en;
+        $about->sub_title_en=$request->sub_title_en;
+        $about->description_en=$request->description_en;
+        $about->save();
+
+        Toastr::success('About Update','Success',["positionClass" => "toast-top-right"]);
+        return redirect()->route('aboutUs');
     }
 // ========================About start======================================
 

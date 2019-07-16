@@ -25,9 +25,10 @@
 								<tr>
 									<td>{{$key + 1}}</td>
 									<td>{{$about->title_en }}</td>
-									<td>Photo</td>
-									<td>{{$about->sub_title_en }}</td>
-									<td>{{$about->description_en }}</td>
+									<td>
+										<img src="{{asset('frontend/assets/img/about/'.$about->photo)}}" alt="" height="100px" width="100"></td>
+									<td>{!!$about->sub_title_en !!}</td>
+									<td>{!!$about->description_en !!}</td>
 									
 									<td>
 										<a href="{{route('aboutEdit',$about->id)}}">

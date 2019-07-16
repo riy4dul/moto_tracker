@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2019 at 02:12 PM
+-- Generation Time: Jul 16, 2019 at 07:56 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `moto_tracker`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abouts`
+--
+
+CREATE TABLE `abouts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title_bn` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_en` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title_bn` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title_en` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_bn` text COLLATE utf8mb4_unicode_ci,
+  `description_en` text COLLATE utf8mb4_unicode_ci,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `abouts`
+--
+
+INSERT INTO `abouts` (`id`, `title_bn`, `title_en`, `sub_title_bn`, `sub_title_en`, `description_bn`, `description_en`, `photo`, `created_at`, `updated_at`) VALUES
+(1, '', 'our customer over 25 years!!', '', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perfer repudiandae nostrum alias quibusdam!</p>', '', '<p>No singulis postulant his, per decore elaboraret sadipscing Id namwisi accusamus dolro ametmoderatius, denique mediocrem voluptatum. per decore elaboraret sadipscing te labitursaperetnec amet. Eos in quis eripuit. Minim theophrastus eum id. Eos an graece libris inter- esset. Eu duo mentitum maluisset</p>', 'fdsaf', NULL, '2019-07-15 23:56:08');
 
 -- --------------------------------------------------------
 
@@ -71,7 +97,7 @@ CREATE TABLE `home_page_services` (
 --
 
 INSERT INTO `home_page_services` (`id`, `title`, `sub_title`, `description`, `photo`, `created_at`, `updated_at`) VALUES
-(10, 'test', 'sss', '234324', 'test-2019-07-13-5d29919508dd3.png', '2019-07-13 02:08:53', '2019-07-13 02:08:53');
+(11, 'tttttttt', 'ssssssss', 'sdfaffdd', 'tttttttt-2019-07-15-5d2c74870cb2f.jpg', '2019-07-15 06:41:43', '2019-07-15 06:41:43');
 
 -- --------------------------------------------------------
 
@@ -94,7 +120,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_07_10_091023_create_home_page_clients_table', 2),
 (4, '2019_07_13_052055_create_home_page_services_table', 3),
-(5, '2019_07_14_053724_create_package_and_prices_table', 4);
+(5, '2019_07_14_053724_create_package_and_prices_table', 4),
+(6, '2019_07_15_044851_create_software_table', 5),
+(7, '2019_07_15_113809_create_sliders_table', 6),
+(9, '2019_07_16_041855_create_abouts_table', 7);
 
 -- --------------------------------------------------------
 
@@ -137,6 +166,54 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sliders`
+--
+
+CREATE TABLE `sliders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title_bn` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_en` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title_bn` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title_en` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sliders`
+--
+
+INSERT INTO `sliders` (`id`, `title_bn`, `title_en`, `sub_title_bn`, `sub_title_en`, `photo`, `created_at`, `updated_at`) VALUES
+(1, NULL, '11111111111111111', NULL, '11111111111111', 'slide-bg-1.jpg', NULL, NULL),
+(2, NULL, '222222222222222', NULL, '2222222222222222', 'slide-bg-2.jpg', NULL, NULL),
+(3, NULL, 'With over 25 years of experience in auto services work', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems. And always delivering on expectation.', 'slide-bg-3.jpg', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `software`
+--
+
+CREATE TABLE `software` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `android_app_link` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `apple_app_link` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_manual` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `software`
+--
+
+INSERT INTO `software` (`id`, `android_app_link`, `apple_app_link`, `user_manual`, `created_at`, `updated_at`) VALUES
+(1, 'https://play.google.com/store/apps/details?id=com.facebook.katana&hl=en', 'https://apps.apple.com/in/app/facebook/id284882215', '2019-07-15-5d2c40d8214aa.pdf', NULL, '2019-07-15 03:01:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -162,6 +239,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `abouts`
+--
+ALTER TABLE `abouts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `home_page_clients`
@@ -194,6 +277,18 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indexes for table `sliders`
+--
+ALTER TABLE `sliders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `software`
+--
+ALTER TABLE `software`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -205,6 +300,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `abouts`
+--
+ALTER TABLE `abouts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `home_page_clients`
 --
 ALTER TABLE `home_page_clients`
@@ -214,19 +315,31 @@ ALTER TABLE `home_page_clients`
 -- AUTO_INCREMENT for table `home_page_services`
 --
 ALTER TABLE `home_page_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `package_and_prices`
 --
 ALTER TABLE `package_and_prices`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `sliders`
+--
+ALTER TABLE `sliders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `software`
+--
+ALTER TABLE `software`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

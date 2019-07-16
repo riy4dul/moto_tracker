@@ -43,8 +43,10 @@ Route::get('/logout',function(){
     Route::post('home-services-delete/{id}','HomePageController@servicesDestroy')->name('servicesDestroy');
     
 
-
+    //==============About==============
     Route::get('about-us','HomePageController@aboutUs')->name('aboutUs');
+    Route::get('about-edit/{id}','HomePageController@aboutEdit')->name('aboutEdit');
+    Route::post('about-update','HomePageController@aboutUpdate')->name('aboutUpdate');
 
     //==============Client==============
 	// Route::get('client-list','CategoryController@index')->name('categoryList');
