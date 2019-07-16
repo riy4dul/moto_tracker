@@ -82,7 +82,7 @@
 		</a>
 	</li> --}}
 	<li class="bold">
-		<a class="waves-effect waves-cyan {{ Request::is('about-us') ? 'active' : ''}}" href="{{route('aboutUs')}}">
+		<a class="waves-effect waves-cyan {{ Request::is('about-*') ? 'active' : ''}}" href="{{route('aboutUs')}}">
 			<i class="material-icons">settings_input_svideo</i>
 			<span class="menu-title" data-i18n="">About Us Page</span>
 		</a>

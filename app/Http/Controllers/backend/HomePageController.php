@@ -9,6 +9,7 @@ use App\backend\HomePageServices;
 use App\backend\PackageAndPrice;
 use App\backend\software;
 use App\backend\About;
+use App\backend\slider;
 use Brian2694\Toastr\Facades\Toastr;
 use Intervention\Image\Facades\Image;
 class HomePageController extends Controller
@@ -23,11 +24,63 @@ class HomePageController extends Controller
         return view('backend.home-page');
     }
 
+// ========================Slider======================================
     public function slider()
     {
-        return view('backend.home-slider');
+        $sliders = slider::all();
+        return view('backend.slider.slider-list',compact('sliders'));
     }
+    
+    public function sliderDestroy($id)
+    {
+        $slider = slider::find($id);
+        if (file_exists('frontend/assets/img/slider/'.$slider->photo))
+        {
+            unlink('frontend/assets/img/slider/'.$slider->photo);
+        }
+        $slider->delete();
 
+        Toastr::error('Slider Deleted','',["positionClass" => "toast-top-right"]);
+        return redirect()->route('homeSlider');
+    }
+    public function sliderAdd(){
+        return view('backend.slider.slider-add');
+    }
+    
+    public function sliderStore(Request $request){
+        $this->validate($request,[
+            'title_en'=> 'required',
+            'sub_title_en'=> 'required',
+            'photo'=> 'required|mimes:jpeg,jpg,png'
+             ]);
+          // return $request;
+        $photo = $request->file('photo');
+        $slug = str_slug($request->title);
+        if (isset($photo))
+        {
+            $currentDate = Carbon::now()->toDateString();
+            $photoname = $slug.'-'.$currentDate.'-'.uniqid().'.'. $photo->getClientOriginalExtension();
+            if (!file_exists('frontend/assets/img/slider'))
+            {
+                mkdir('frontend/assets/img/slider',0777,true);
+            }
+
+            $photo->move('frontend/assets/img/slider',$photoname);
+
+        }else{
+            $photoname = "frontend/assets/img/slider/default.jpg";
+        }
+
+        $slider = new slider();
+        $slider->title_en=$request->title_en;
+        $slider->sub_title_en=$request->sub_title_en;
+        $slider->photo=$photoname;
+        $slider->save();
+
+        Toastr::success('slider Added','',["positionClass" => "toast-top-right"]);
+        
+        return redirect()->route('homeSlider');
+    }
     // ========================About start======================================
     public function aboutUs()
     {

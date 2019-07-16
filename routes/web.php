@@ -34,25 +34,30 @@ Route::get('/logout',function(){
     Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
     Route::get('home-page','HomePageController@index')->name('homePage');
 
+    //==============slider==============
     Route::get('home-slider','HomePageController@slider')->name('homeSlider');
-
-     //==============services==============
+    Route::get('home-slider-add','HomePageController@sliderAdd')->name('sliderAdd');
+    Route::post('home-slider-store','HomePageController@sliderStore')->name('sliderStore');
+    Route::get('home-slider-delete/{id}','HomePageController@sliderDestroy')->name('sliderDestroy');
+    //==============services==============
     Route::get('home-services','HomePageController@services')->name('homeServices');
     Route::get('home-services-add','HomePageController@servicesAdd')->name('servicesAdd');
     Route::post('home-services-store','HomePageController@servicesStore')->name('servicesStore');
     Route::post('home-services-delete/{id}','HomePageController@servicesDestroy')->name('servicesDestroy');
-    
+    //==============Client==============
+    // Route::get('client-list','CategoryController@index')->name('categoryList');
+    Route::get('home-clients-list','HomePageController@clients')->name('homeOurClients');
+    Route::post('client-add','HomePageController@store')->name('clientStore');
+    Route::get('home-clients-add','HomePageController@clientsAdd')->name('clientsAdd');
+
+
 
     //==============About==============
     Route::get('about-us','HomePageController@aboutUs')->name('aboutUs');
     Route::get('about-edit/{id}','HomePageController@aboutEdit')->name('aboutEdit');
     Route::post('about-update','HomePageController@aboutUpdate')->name('aboutUpdate');
 
-    //==============Client==============
-	// Route::get('client-list','CategoryController@index')->name('categoryList');
-    Route::get('home-clients-list','HomePageController@clients')->name('homeOurClients');
-	Route::post('client-add','HomePageController@store')->name('clientStore');
-    Route::get('home-clients-add','HomePageController@clientsAdd')->name('clientsAdd');
+    
     Route::post('client-delete/{id}','HomePageController@clientDestroy')->name('clientDelete');
 
     //==============package and price==============
