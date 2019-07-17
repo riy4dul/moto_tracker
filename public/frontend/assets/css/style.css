@@ -402,7 +402,8 @@ img {
     position: relative;
 }
 .main-menu-area .logo::before {
-    background: #00299b;
+    /*background: #00299b;*/
+    background: #0aa21721;
     content: "";
     height: 100%;
     position: absolute;

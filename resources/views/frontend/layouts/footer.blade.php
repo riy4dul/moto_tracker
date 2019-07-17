@@ -64,7 +64,7 @@
                         <div class="col-md-12 text-center">
                             <div class="social-icos">    
                                 <ul class="list-inline">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.facebook.com/mototrackerbd"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>

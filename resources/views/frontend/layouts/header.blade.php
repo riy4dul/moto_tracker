@@ -4,7 +4,7 @@
                 <div class="row"> 
                     <div class="col-md-3"> 
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('')}}frontend/assets/img/logo.png" alt="Logo"></a>
+                            <a href="{{route('/')}}"><img src="{{asset('')}}frontend/assets/img/logo.png" alt="Logo"></a>
                         </div>
                     </div>
                     
