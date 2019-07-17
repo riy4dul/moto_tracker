@@ -17,31 +17,30 @@
 </div>
 <!-- End Breadcumbs Area -->
 
- <!-- Start Services Area -->
+<!-- Start Services Area -->
         <div class="content-block-area">
             <div class="container">
                 <div class="row">
-                	@foreach($pakages as $pakage)
-                    <div class="col-lg-3 col-md-6">
+                    @foreach($pakages as $pakage)
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="pricingTable orange">
                             <div class="pricingTable-header">
                                 <span class="price-value">{{$pakage->price}}<span class="currency">৳</span></span>
                                 <h3 class="title">{{$pakage->title}}</h3>
                             </div>
                             <ul class="pricing-content">
-                                {{-- <li>{{$pakage->sub_title}}</li> --}}
                                 <li>{!! $pakage->description !!}</li>
                             </ul>
                             {{-- <a href="#" class="pricingTable-signup">Sign Up</a> --}}
                         </div>
-                    </div>
+                    </div> 
                     @endforeach
-                    
                 </div>
-                <div class="space-tb-30"></div>
+                {{-- <div class="space-tb-30"></div> --}}
                 
                 
             </div>
         </div>
-        <!-- End Services Area -->
+<!-- End Services Area -->
+
 	@endsection
