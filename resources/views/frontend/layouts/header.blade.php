@@ -42,8 +42,8 @@
                                                 <a href="#" onclick="document.getElementById('loginForm').submit();"> 
                                                 <i class=""></i> Demo</a>
                                                          <form action="http://139.59.7.60/authentication/store" method="POST" id="loginForm">
-                                                            <input type="hidden" name="email" value="demo@moto.com"><br>
-                                                            <input type="hidden" name="password" value="demo"><br>
+                                                            <input type="hidden" name="email" value="demo@moto.com">
+                                                            <input type="hidden" name="password" value="demo">
                                                                {{ csrf_field() }}
                                                          </form>
 
