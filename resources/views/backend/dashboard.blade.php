@@ -78,8 +78,8 @@
 								<div class="card-content center">
 									<img src="{{asset('')}}backend/app-assets/images/icon/apple-watch.png" class="width-40 border-round z-depth-5"
 									alt="" class="responsive-img" />
-									<h5 class="white-text lighten-4">50% Off</h5>
-									<p class="white-text lighten-4">On apple watch</p>
+									<h5 class="white-text lighten-4">{{$totalslider}}</h5>
+									<p class="white-text lighten-4">Total Slider</p>
 								</div>
 							</div>
 						</div>
@@ -88,8 +88,8 @@
 								<div class="card-content center">
 									<img src="{{asset('')}}backend/app-assets/images/icon/printer.png" class="width-40 border-round z-depth-5" alt=""
 									class="responsive-img" />
-									<h5 class="white-text lighten-4">20% Off</h5>
-									<p class="white-text lighten-4">On Canon Printer</p>
+									<h5 class="white-text lighten-4">{{$totalclient}}</h5>
+									<p class="white-text lighten-4">Total Client</p>
 								</div>
 							</div>
 						</div>
@@ -98,8 +98,8 @@
 								<div class="card-content center">
 									<img src="{{asset('')}}backend/app-assets/images/icon/laptop.png" class="width-40 border-round z-depth-5" alt=""
 									class="responsive-img" />
-									<h5 class="white-text lighten-4">40% Off</h5>
-									<p class="white-text lighten-4">On apple macbook</p>
+									<h5 class="white-text lighten-4">{{$totalservice}}</h5>
+									<p class="white-text lighten-4">Total Service</p>
 								</div>
 							</div>
 						</div>
@@ -108,8 +108,8 @@
 								<div class="card-content center">
 									<img src="{{asset('')}}backend/app-assets/images/icon/bowling.png" class="width-40 border-round z-depth-5" alt=""
 									class="responsive-img" />
-									<h5 class="white-text lighten-4">60% Off</h5>
-									<p class="white-text lighten-4">On any game</p>
+									<h5 class="white-text lighten-4">{{$totalpackage}}</h5>
+									<p class="white-text lighten-4">Total Package</p>
 								</div>
 							</div>
 						</div>

@@ -21,7 +21,12 @@ class HomePageController extends Controller
      */
     public function index()
     {
-        return view('backend.home-page');
+         $totalslider = slider::count();
+         $totalclient = home_page_client::count();
+         $totalservice = HomePageServices::count();
+         $totalpackage = PackageAndPrice::count();
+        return view('backend.dashboard',compact('totalslider','totalclient','totalservice','totalpackage'));
+
     }
 
 // ========================Slider======================================

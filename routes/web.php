@@ -21,18 +21,21 @@ Route::group(['namespace' => 'frontend'], function(){
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-Route::get('/logout',function(){
-    Auth::logout();
-    return redirect('/');
+// Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+// Route::get('/logout',function(){
+//     Auth::logout();
+//     return redirect('/');
     
-});
+// });
 
 
 
 // =======================Route For Backend===================
     Route::group(['middleware' =>'auth' , 'namespace' => 'backend'], function(){
-    Route::get('home-page','HomePageController@index')->name('homePage');
+
+    Route::get('/dashboard', 'HomePageController@index')->name('dashboard');
+    
+    // Route::get('home-page','HomePageController@index')->name('homePage');
 
     //==============slider==============
     Route::get('home-slider','HomePageController@slider')->name('homeSlider');
