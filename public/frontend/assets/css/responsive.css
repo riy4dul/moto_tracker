@@ -378,7 +378,8 @@
 /* medium Devices, Tablets and tablet portrait screen */
 @media (max-width: 991px) {
     .main-menu-area {
-        background-color: #00299b;
+        /*background-color: #00299b;*/
+        background-color: #ffffff;
     }
     .main-menu-area .navbar-default {
         z-index: 999;
@@ -407,7 +408,8 @@
         width: 150px;
     }
     .main-menu-area .navbar-default .navbar-toggle .icon-bar {
-        background-color: #fff;
+        background-color: #000000;
+        /*background-color: #fff;*/
     }
     .main-menu-area .navbar-default .navbar-toggle:focus, 
     .main-menu-area .navbar-default .navbar-toggle:hover {

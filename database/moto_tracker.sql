@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2019 at 01:48 PM
+-- Generation Time: Jul 18, 2019 at 02:44 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -239,7 +239,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'riyadul@gmail.com', NULL, '$2y$10$q3OlfOGypXF9K0XSOKktl.rQaOuLwjrCbXjmvrZhryYN4NJkVH/s.', NULL, '2019-07-06 23:01:35', '2019-07-06 23:01:35'),
-(2, 'Bd Soft It', 'support@bdsoftit.com', NULL, '$2y$10$LUUvT/FyW47YAl.DBNqI.eDpOXpSGZMhLLLmT9F0fcGxkz0Z9azIu', NULL, '2019-07-06 23:11:22', '2019-07-06 23:11:22');
+(2, 'Bd Soft It', 'support@bdsoftit.com', NULL, '$2y$10$LUUvT/FyW47YAl.DBNqI.eDpOXpSGZMhLLLmT9F0fcGxkz0Z9azIu', NULL, '2019-07-06 23:11:22', '2019-07-06 23:11:22'),
+(4, 'Moto Tracker', 'mmhassan.sm@gmail.com', NULL, '$2y$10$kA6ytupOviMxIcEsT9.woeVYhUsgFHVfqUsZUxU3cASH47f/eyroS', NULL, '2019-07-18 06:41:31', '2019-07-18 06:41:31');
 
 --
 -- Indexes for dumped tables
@@ -350,7 +351,7 @@ ALTER TABLE `software`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
