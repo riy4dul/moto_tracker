@@ -38,7 +38,16 @@
                                                 <li><a href="{{$software->apple_app_link }}">Apple APP</a></li>
                                             </ul>
                                         </li>
-                                        <li ><a href="http://139.59.7.60/">Demo</a></li>
+                                        <li >
+                                                <a href="#" onclick="document.getElementById('loginForm').submit();"> 
+                                                <i class=""></i> Demo</a>
+                                                         <form action="http://139.59.7.60/authentication/store" method="POST" id="loginForm">
+                                                            <input type="hidden" name="email" value="demo@moto.com"><br>
+                                                            <input type="hidden" name="password" value="demo"><br>
+                                                               {{ csrf_field() }}
+                                                         </form>
+
+                                        </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">login <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown-menu">
