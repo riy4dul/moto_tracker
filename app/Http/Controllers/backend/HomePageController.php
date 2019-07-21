@@ -144,7 +144,7 @@ class HomePageController extends Controller
          return view('backend.services.home-add-services');
     }
     
-     public function servicesStore(Request $request)
+      public function servicesStore(Request $request)
     {
          $this->validate($request,[
             'title'=> 'required',
@@ -162,8 +162,8 @@ class HomePageController extends Controller
             {
                 mkdir('frontend/assets/img/services',0777,true);
             }
-
-            $photo->move('frontend/assets/img/services',$photoname);
+            $photo = Image::make($photo->getRealPath())->resize(390, 260);
+            $photo->save('frontend/assets/img/services/'.$photoname);
 
         }else{
             $photoname = "frontend/assets/img/services/default.jpg";
@@ -180,6 +180,7 @@ class HomePageController extends Controller
         
         return redirect()->route('homeServices');
     }
+    
     
     public function servicesDestroy($id)
     {
