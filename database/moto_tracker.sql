@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2019 at 02:44 PM
+-- Generation Time: Jul 23, 2019 at 07:03 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -190,9 +190,10 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `title_bn`, `title_en`, `sub_title_bn`, `sub_title_en`, `photo`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f1881b1a.jpg', '2019-07-16 03:55:36', '2019-07-16 03:55:36'),
-(2, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f3bc1281.jpg', '2019-07-16 03:56:11', '2019-07-16 03:56:11'),
-(3, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f5226a5e.jpg', '2019-07-16 03:56:34', '2019-07-16 03:56:34');
+(1, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-22-5d3561cfb5ac9.jpg', '2019-07-16 03:55:36', '2019-07-16 03:55:36'),
+(3, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f5226a5e.jpg', '2019-07-16 03:56:34', '2019-07-16 03:56:34'),
+(4, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-16-5d2d9f1881b1a.jpg', '2019-07-21 05:00:47', '2019-07-21 05:00:47'),
+(7, NULL, 'With over 25 years of experience', NULL, 'Value is a service of trust. The trust your customers have in you. The trust you have in your people, strategies and systems.', '-2019-07-22-5d3565011b182.jpg', '2019-07-22 01:25:53', '2019-07-22 01:25:53');
 
 -- --------------------------------------------------------
 
@@ -339,7 +340,7 @@ ALTER TABLE `package_and_prices`
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `software`
